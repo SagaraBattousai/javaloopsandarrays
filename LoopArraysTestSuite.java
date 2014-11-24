@@ -15,12 +15,19 @@ public class LoopArraysTestSuite {
 
     public static void fibTests() {
         testFib(5, 5);
-        // TODO add test cases for fib here
+        testFib(1, 1);
+        testFib(2, 1);
+        testFib(8, 21);
+        testFib(7, 13);
+               
     }
 
     public static void maximumTests() {
         testMaximum(new int[] { 1, 3, 2 }, 3);
-        // TODO add test cases for maximum here
+        testMaximum(new int[] { 543, 0, -153 }, 543);
+        testMaximum(new int[] { 1,-4335475,-453742}, 1);
+        testMaximum(new int[] { 354354,4543387,4563647}, 4563647);
+
     }
 
     public static void frequencyTableTests() {
