@@ -62,9 +62,24 @@ public class LoopArraysTestSuite {
     }
 
     private static boolean approxEqualDoubleArrays(double[][] x, double[][] y) {
-        // TODO
-        System.out.println("TODO: implement equal nested double arrays");
+      if (x.length != y.length){
         return false;
+      }
+      int c = 0;
+        for(int a = 0; a < x.length; a++){
+          if (x[a].length != y[c].length){
+            return false;
+          }
+          for(int b = 0; b < x [a].length; a++){
+            int d = 0;
+            if (approxEqualDouble(x[a][b], y[c][d])){
+              return false;
+            }
+            d++;
+          }
+          c++;          
+        }
+        return true;
     }
 
     private static void testFib(int n, int expected) {

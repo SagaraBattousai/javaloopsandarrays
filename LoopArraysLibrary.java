@@ -31,18 +31,21 @@ public class LoopArraysLibrary {
       "Invalid, Minimum cannot be greater than the Maximum";
     assert (numBuckets >= 0): "You gotta have some numBuckets!";
     
-    double inc = (Math.abs(maximum) + Math.abs(minimum)) / numBuckets;
+    double inc = (Math.abs(maximum - minimum)) / numBuckets;
     int [] freq = new int[numBuckets];
           
-    for (double i = minimum; i < maximum; i += inc){
-        
-      for (int j = 0; j < data.length; j++){
-     
-        if (data[j] >= i && data[j] < (i + inc)){
-          freq[j] += 1;
-        }      
+
+    for (int j = 0; j < data.length; j++){
+      int k = 0;
+      for (double i = minimum; i < maximum; i += inc){
+          
+          if (data[j] >= i && data[j] < (i + inc)){
+            freq[k] += 1;
+            break; // no point looking at other rows therefore exit to top loop.
+          }      
+          k ++;
+        } 
       } 
-    }
     return freq;
 
 
