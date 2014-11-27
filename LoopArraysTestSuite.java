@@ -65,19 +65,22 @@ public class LoopArraysTestSuite {
       if (x.length != y.length){
         return false;
       }
-      int c = 0;
-        for(int a = 0; a < x.length; a++){
-          if (x[a].length != y[c].length){
-            return false;
+      /*By initialising c and d at the beginning and by adding c = a (line71)
+      and d = b (line77) there is no need to increment c and d at specific
+      loop ending and so read-ability is far increased over random
+      initialsation and increment of b and c at random placing.*/
+      int c,d = 0;
+      for(int a = 0; a < x.length; a++){
+        c = a;
+        if (x[a].length != y[c].length){
+          return false;
           }
-          for(int b = 0; b < x [a].length; a++){
-            int d = 0;
-            if (approxEqualDouble(x[a][b], y[c][d])){
+          for(int b = 0; b < x[a].length; b++){
+            d = b;
+            if (!approxEqualDouble(x[a][b], y[c][d])){
               return false;
             }
-            d++;
           }
-          c++;          
         }
         return true;
     }

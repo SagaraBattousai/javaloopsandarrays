@@ -53,7 +53,64 @@ public class LoopArraysLibrary {
   }
 
   public static double[][] matrixMultiply(double[][] m, double[][] n) {
-    // TODO: Implement this
-    return null;
+    //As Arrays are not empty and are not jagged it is okay to use 
+    //array[0].length to get the length of the internal array.
+    double [] [] g = new double [m.length][n[0].length];
+
+    for(int r = 0; r < m.length; r++){
+      for(int c = 0; c < n[0].length; c++){
+        for(int j = 0; j < n.length; j++){
+            g[r][c] += m[r][j] * n[j][c];
+        }
+      }
+    }
+    return g;
   }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
