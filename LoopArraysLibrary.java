@@ -25,7 +25,7 @@ public class LoopArraysLibrary {
     return h;
   }
 
-  public static int[] frequencyTable(double minimum, double maximum,
+public static int[] frequencyTable(double minimum, double maximum,
     int numBuckets, double[] data) {
     assert (minimum <= maximum):
       "Invalid, Minimum cannot be greater than the Maximum";
@@ -33,8 +33,7 @@ public class LoopArraysLibrary {
     
     double inc = (Math.abs(maximum - minimum)) / numBuckets;
     int [] freq = new int[numBuckets];
-          
-
+    
     for (int j = 0; j < data.length; j++){
       int k = 0;
       for (double i = minimum; i < maximum; i += inc){
