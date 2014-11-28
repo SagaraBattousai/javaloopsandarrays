@@ -36,55 +36,31 @@ public class LoopArraysProgram {
     
   
 /*private static void printHist(   */ //{
-    for(int j = 0; j < numBuckets; j++){
+      System.out.println("");
       for(int i = LoopArraysLibrary.maximum(freq); i > 0; i--){
-        if (freq[j] == i){
-          switch(j){
-            case 0: System.out.println(i + "|#");
-            case 1: System.out.println(i + "| #");
-            case 2: System.out.println(i + "|  #");
-            case 3: System.out.println(i + "|   #");
-            case 4: System.out.println(i + "|    #");
-            case 5: System.out.println(i + "|     #");
+      String gaps = "     ";
+      System.out.print(i + " |");
+        for(int j = 0; j < numBuckets; j++){
+          if (freq[j] >= i){
+            System.out.print("    ##    ");
+   //         gaps += "    ";
+          } else {
+            System.out.print("          ");
+
+       //   gaps += "      ";
           }
-        }
+      }
+      System.out.println("");
+          }
+      System.out.println("  +---------------------------------------------" +
+         "----------------------->");
+      System.out.print("   ");
+      for(double j = min; j < max; j += inc){
+        System.out.print(j + "_" + (j + inc) + " | ");
       } 
-    }
-  }
-  }
-
-/*
+     System.out.println(""); 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  private static String spaces(int s){
-    if (s == 0){
-      return "";
-    }
-    return spacePrime("", s);
-  }
-
-  private static String spacePrime(String a, int s){
-    if (s == 0){
-      return a + "";
-    }
-    return spacePrime(a + " ", s -1);
-  }*/
-
+        }
+}
