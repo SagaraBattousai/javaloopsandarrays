@@ -20,35 +20,71 @@ public class LoopArraysProgram {
     int f = 0;
     int[] freq = LoopArraysLibrary.frequencyTable(min, max, numBuckets,
         values);
-//    double [][] buckets = new double [numBuckets][2]; //2 is for the two limits
-//  public static void       
+
+   // printTable(numBuckets);
+   // printHist(
+ // }    
+ // private static void printTable( {
     System.out.println("Bucket|Frequency (i)");
     System.out.println("============================");
    //for(int i = 0; i < numBuckets; i++){
       for(double j = min; j < max; j += inc){
-        System.out.print(j + " <= i < " + (j + inc) + " ");
-        System.out.println( " | " + freq [f]);
+        System.out.println(j + " <= i < " + (j + inc) + " | " + 
+            freq [f]);
         f++;
       }
+    
   
-  
-  
-  
-  
-  
-  
-  
-  
+/*private static void printHist(   */ //{
+    for(int j = 0; j < numBuckets; j++){
+      for(int i = LoopArraysLibrary.maximum(freq); i > 0; i--){
+        if (freq[j] == i){
+          switch(j){
+            case 0: System.out.println(i + "|#");
+            case 1: System.out.println(i + "| #");
+            case 2: System.out.println(i + "|  #");
+            case 3: System.out.println(i + "|   #");
+            case 4: System.out.println(i + "|    #");
+            case 5: System.out.println(i + "|     #");
+          }
+        }
+      } 
+    }
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   }
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  private static String spaces(int s){
+    if (s == 0){
+      return "";
+    }
+    return spacePrime("", s);
+  }
+
+  private static String spacePrime(String a, int s){
+    if (s == 0){
+      return a + "";
+    }
+    return spacePrime(a + " ", s -1);
+  }*/
+
