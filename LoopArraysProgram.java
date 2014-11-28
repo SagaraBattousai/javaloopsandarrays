@@ -45,8 +45,14 @@ public class LoopArraysProgram {
         }
         System.out.println("");
       }
-      System.out.println("  +---------------------------------------------" +
-         "----------------------->");
+      // Used to get the x axis to look smart. The axis dont exactly match up
+      // due to the minus signs, However whilst it's pretty accurate 10 buckets
+      // for example will mean the axis wont fully cover the values.
+      System.out.print("  +--------------");
+      for (int j = 2; j < numBuckets; j++){
+        System.out.print("----------");
+      }
+      System.out.println("----------->");
       System.out.print("   ");
       for(double j = min; j < max; j += inc){
         System.out.print(j + "_" + (j + inc) + " | ");

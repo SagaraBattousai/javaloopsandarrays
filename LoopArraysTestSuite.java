@@ -68,7 +68,7 @@ public class LoopArraysTestSuite {
                                           }
                           , new double[][] { { 56, 44 }
                                            , { 78, 62 } });
-        testMatrixMultiply(new double[][] { { 331, 349, 367, 383 }
+/*        testMatrixMultiply(new double[][] { { 331, 349, 367, 383 }
                                           , { 337, 353, 373, 389 }
                                           , { 347, 359, 379, 397 }
                                           , { 509, 547, 487, 587 }
@@ -83,7 +83,7 @@ public class LoopArraysTestSuite {
                           , new double[][] { { 34, 44, 54 }
                                            , { 86, 112, 138 }
                                            , { 30, 45, 60 } });
-    }
+    */}
 
     private static final double EPSILON = 0.001;
 
