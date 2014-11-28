@@ -3,12 +3,11 @@ public class LoopArraysProgram {
   public static void main(String[] args) {
 
     System.out.println("Please enter the amount of data you have (n) and" +
-        " the the n values, each separated by a space: ");
+        " the the n values (i), each separated by a space: ");
 
     int n = IOUtil.readInt();
     double[] values = new double[n];
-    f
-      or(int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++){
       values[i] = IOUtil.readDouble(); 
     }
 
@@ -24,7 +23,7 @@ public class LoopArraysProgram {
         values);
 // Table Generation, pointless todo in a method as its arbitary what 
 // arguments is send.
-    System.out.println("Bucket|Frequency (i)");
+    System.out.println("Bucket|Frequency (of i)");
     System.out.println("============================");
       for(double j = min; j < max; j += inc){
         System.out.println(j + " <= i < " + (j + inc) + " | " + 

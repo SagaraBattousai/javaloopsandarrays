@@ -34,7 +34,16 @@ public class LoopArraysTestSuite {
         testFrequencyTable(-1.5, 1.5, 6
                           ,new double[] { -1.1, 1.1, 1.2, -0.8, 1.6 }
                           ,new int[] { 1, 1, 0, 0, 0, 2 });
-        // TODO add test cases for frequencyTable here
+        testFrequencyTable(0, 10, 5
+                          ,new double[] { 4, 1.7, 1.2, 5, 2.5 }
+                          ,new int[] { 2, 1, 2, 0, 0 });
+        testFrequencyTable(0, 10, 5
+                          ,new double[] { 1.7, 5, 2.3, 6, 2.7 }
+                          ,new int[] {1, 2, 1, 1, 0 });
+        testFrequencyTable(-20, 5, 10
+                          ,new double[] {-17, -5, -12, -1.2, -1.7, -25,
+                            -6, -18, -19, -1.25 }
+                          ,new int[] { 2, 1, 0, 1, 0, 1, 1,  3, 0, 0 });
     }
 
     public static void matrixMultiplyTests() {
@@ -51,7 +60,29 @@ public class LoopArraysTestSuite {
                           , new double[][] { { 34, 44, 54 }
                                            , { 86, 112, 138 }
                                            , { 30, 45, 60 } });
-        // TODO add test cases for matrix multiply here
+        testMatrixMultiply(new double[][] { { 1, 6 }
+                                          , { 3, 8 }
+                                          }
+                          ,new double[][] { { 2, 2 }
+                                          , { 9, 7 }
+                                          }
+                          , new double[][] { { 56, 44 }
+                                           , { 78, 62 } });
+        testMatrixMultiply(new double[][] { { 331, 349, 367, 383 }
+                                          , { 337, 353, 373, 389 }
+                                          , { 347, 359, 379, 397 }
+                                          , { 509, 547, 487, 587 }
+                                          , { 1033, 1039, 1049, 1051 }
+                                          , { 1061, 1063, 1069, 1087 } 
+                                          }
+                          ,new double[][] { { 683, 691, 701, 709, 719, 727 }
+                                          , { 733, 739, 743, 751, 757, 761 }
+                                          , { 769, 773, 787, 797, 809, 811 }
+                                          , { 821, 823, 827, 829, 839, 853 }
+  
+                          , new double[][] { { 34, 44, 54 }
+                                           , { 86, 112, 138 }
+                                           , { 30, 45, 60 } });
     }
 
     private static final double EPSILON = 0.001;
